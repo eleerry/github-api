@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-function Layout({children}){
+const Layout = ({children}) => {
     return(
         <section>
             <header>Header</header>
