@@ -8,7 +8,6 @@ const RepositoryItem = ({ name, linkToRepo, fullname }) => {
         <h4>Full name:</h4>
         <a href={linkToRepo}
         target='_blanck' rel='noreferrer'>{fullname}</a>
-        
     </div>
     )
     
