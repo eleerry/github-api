@@ -7,18 +7,36 @@ const Profile = () => {
     const { githubState } = UseGithub()
 
   return <s.Wrapper>
-        <s.WrapperImage 
-            src="https://avatars.githubusercontent.com/u/47307816?v=4"
+    <s.WrapperImage 
+            src={githubState.user.avatar}
             alt="avatar"/>
-        <s.WrapperInfoUser>
+    <s.WrapperInfoUser>
         <div>
             <h1>{githubState.user.name}</h1>
-            <s.WrapperUsername>
+            <s.WrapperUserGeneric>
                 <h3>Username:</h3>
-                <a href={githubState.user.htmlUrl}target='_blanck' rel='noreferrer'>
+                <a href={githubState.user.htmlUrl}
+                    target='_blanck'
+                    rel='noreferrer'>
                     {githubState.user.login}
                 </a>
-            </s.WrapperUsername>
+            </s.WrapperUserGeneric>
+            <s.WrapperUserGeneric>
+                <h3>Company:</h3>
+                <span>{githubState.user.company}</span>
+            </s.WrapperUserGeneric>
+            <s.WrapperUserGeneric>
+                <h3>Location:</h3>
+                <span>{githubState.user.location}</span>
+            </s.WrapperUserGeneric>
+            <s.WrapperUserGeneric>
+                <h3>Blog:</h3>
+                <a href={githubState.user.blog}
+                    target='_blanck'
+                    rel='noreferrer'>
+                    {githubState.user.blog}
+                </a>
+            </s.WrapperUserGeneric>
         </div>
         <s.WrapperStatusCount>
             <div>
@@ -38,7 +56,7 @@ const Profile = () => {
                 <span>{githubState.user.public_repos}</span>
             </div>
         </s.WrapperStatusCount>
-        </s.WrapperInfoUser>
+    </s.WrapperInfoUser>
   </s.Wrapper>
   
 

@@ -9,7 +9,6 @@ const Layout = ({children}) => {
             {children}
         </s.WrapperLayout>
     )
-
 }
 
 export default Layout
